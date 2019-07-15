@@ -20,7 +20,7 @@ public class CommandHelp extends Command{
 		HyBot.getCommandManager().getCommands().forEach(x-> commandList +=
 				"\n<"+SGuild.getSGuild(event.getGuild()).getCommandSymbol()+" "+x.getName()+"> "+x.getDescription()
 				);
-		commandList += "\nI always send new news, in linked channel, I scan to you";
+		commandList += "\nI always send new news, in linked channel, I scan for you";
 		EmbedBuilder embed = new EmbedBuilder();
 		embed.setDescription(commandList);
 		event.getTextChannel().sendMessage(embed.build()).queue();
