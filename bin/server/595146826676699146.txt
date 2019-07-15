@@ -1,0 +1,7 @@
+<name>HyBot</name>
+<symbol>hy</symbol>
+<link>
+	<Youtube>597814472836382730</Youtube>
+	<Twitter>597814540985565303</Twitter>
+	<Website>597819495297449995</Website>
+</link>
