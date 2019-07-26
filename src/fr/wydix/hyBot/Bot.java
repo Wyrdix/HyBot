@@ -5,7 +5,7 @@ import net.dv8tion.jda.core.JDABuilder;
 //Just create a new JDABuilder
 public class Bot extends JDABuilder{
 	public Bot() {
-		this.setToken("NTk1MTQ2OTY5NzgyMTU3MzMy.XShsSw._azee50n4XaAWQg-RbBxVoXENYI");
+		this.setToken("/*Enter here the token of your bot*/");
 		this.addEventListener(new EventListener());
 		}
 	
