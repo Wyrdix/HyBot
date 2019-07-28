@@ -34,7 +34,7 @@ public class CommandManager {
 		return null;
 	}
 	
-	public void invoke(MessageReceivedEvent event) throws IOException {
+	public void invoke(MessageReceivedEvent event) throws IOException, InterruptedException {
 		
 		if(!event.getMessage().getContentRaw().startsWith(SGuild.getSGuild(event.getGuild()).getCommandSymbol()+ " ")) return;
 		List<String> args = event.getMessage().getContentRaw() == null ? new ArrayList<>() : new ArrayList<>(Arrays.asList(event.getMessage().getContentRaw().split(" ")));
