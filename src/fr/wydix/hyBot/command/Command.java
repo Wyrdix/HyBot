@@ -21,5 +21,5 @@ public abstract class Command{
 		return description;
 	}
 	
-	public abstract void onCommand(MessageReceivedEvent event, String[] args) throws IOException;
+	public abstract void onCommand(MessageReceivedEvent event, String[] args) throws IOException, InterruptedException;
 }
