@@ -13,7 +13,7 @@ public class CommandLink extends Command{
 	}
 	
 	@Override
-	public void onCommand(MessageReceivedEvent event, String[] args) throws IOException {
+	public void onCommand(MessageReceivedEvent event, String[] args) throws IOException, InterruptedException {
 		if(args.length != 1) {
 			event.getChannel().sendMessage(event.getAuthor().getAsMention()+" link command take only one argument : Youtube,Website or Twitter").queue();
 			return;
@@ -42,7 +42,6 @@ public class CommandLink extends Command{
 				event.getTextChannel().deleteMessages(event.getTextChannel().getHistory().retrievePast(100).complete()).submit();
 			}catch (Exception e) {break;}
 		}while(event.getTextChannel().hasLatestMessage());
-		event.getChannel().sendMessage(args[0] +" is now link here").queue();
 		if(raw.equalsIgnoreCase("Youtube")) {
 			HyBot.getNewsManager().getNewsList().get(1).init(SGuild.getSGuild(event.getGuild()));
 		}else if(raw.equalsIgnoreCase("Website")) {
@@ -50,6 +49,7 @@ public class CommandLink extends Command{
 		}else if(raw.equalsIgnoreCase("Twitter")) {
 			HyBot.getNewsManager().getNewsList().get(0).init(SGuild.getSGuild(event.getGuild()));
 		}
+		event.getChannel().sendMessage(args[0] +" is now link here").queue();
 	}
 	public void unLink(MessageReceivedEvent event) throws IOException {
 		String whatIsUnlink = "";
