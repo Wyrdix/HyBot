@@ -1,2 +1,2 @@
 # HyBot
- A litle bot for hytale news
+ A little bot for hytale news
